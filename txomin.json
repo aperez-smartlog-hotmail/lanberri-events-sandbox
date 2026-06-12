@@ -1,0 +1,40 @@
+{
+  "titulo": "Programa de fiestas",
+  "menuHeader": "JAIAK 2026",
+  "menuPrincipal": {
+    "texto": "📅 Programa",
+    "url": "index.html"
+  },
+  "portada": [
+    "portada1.jpg"
+  ],
+  "textos": {
+    "inscribirse": "📝 Inscribirse",
+    "eventoNoEncontrado": "Evento no encontrado"
+  },
+  "eventos": [
+    {
+      "id": "fiesta-ibicenca",
+      "titulo": "🎉Fiesta Ibicenca 26/08",
+      "descripcion": "<br><p>Concurso abierto a todos los vecinos.</p> <p>La entrega será a las 12:00.</p>",
+      "imagenes": [
+        "fiesta-ibicenca.jpg"
+      ]
+    },
+    {
+      "id": "paella",
+      "titulo": "🥘Paellada Popular 10/09",
+      "imagenes": [
+        "paella.jpg"
+      ],
+      "inscripcion": "https://forms.google.com/xxx"
+    },
+    {
+      "id": "merchandising",
+      "titulo": "🛍️ Merchandising",
+      "imagenes": [
+        "merchandising.jpg"
+      ]
+    }
+  ]
+}
