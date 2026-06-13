@@ -6,6 +6,9 @@
     document.getElementById("site-title").textContent =
         site.menuHeader;
 
+    document.getElementById("menu-toggle").textContent =
+            site.menuResponsiveOpen;
+
     const menuContainer = document.getElementById("menu");
 
     function renderItem(item) {
@@ -87,7 +90,7 @@
 
                 sidebar.classList.remove("open");
 
-                menuToggle.textContent = "☰ Menú";
+                menuToggle.textContent = site.menuResponsiveOpen;
             }
         });
 
@@ -136,8 +139,8 @@
 
         menuToggle.textContent =
             sidebar.classList.contains("open")
-                ? "✕ Cerrar"
-                : "☰ Menú";
+                ? site.menuResponsiveClose
+                : site.menuResponsiveOpen;
     });
 
 })();

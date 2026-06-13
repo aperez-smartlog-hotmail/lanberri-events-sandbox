@@ -1,6 +1,8 @@
 {
   "titulo": "Programa de fiestas",
   "menuHeader": "JAIAK 2026",
+  "menuResponsiveOpen": "☰ Eventos",
+  "menuResponsiveClose": "✕ Cerrar",
   "menus": [
     {
       "id": "programa",
@@ -20,9 +22,6 @@
     {
       "id": "paella",
       "titulo": "🥘Paellada Popular 10/09",
-      "imagenes": [
-        "paella.jpg"
-      ],
       "enlaces": [
         {
           "texto": "📜 Bases",
@@ -32,19 +31,21 @@
           "texto": "📝 Inscribirse",
           "url": "https://www.google.es/algo"
         }
+      ],"imagenes": [
+        "paella.jpg"
       ]
     },
     {
       "id": "merchandising",
       "titulo": "🛍️ Merchandising",
-      "imagenes": [
-        "merchandising.jpg"
-      ],
       "enlaces": [
         {
           "texto": "🛒 Comprar camisetas",
           "url": "https://www.google.es/tienda"
         }
+      ],
+      "imagenes": [
+        "merchandising.jpg"
       ]
     }
   ]
