@@ -92,3 +92,47 @@ body {
         position: relative;
     }
 }
+
+/* Botón hamburguesa */
+
+#menu-toggle {
+    display: none;
+}
+
+/* Móvil */
+
+@media (max-width: 768px) {
+
+    #menu-toggle {
+
+        display: block;
+
+        position: sticky;
+        top: 0;
+
+        width: 100%;
+
+        padding: 15px;
+
+        border: none;
+
+        font-size: 18px;
+
+        cursor: pointer;
+
+        z-index: 1000;
+    }
+
+    #sidebar {
+
+        display: none;
+
+        width: 100%;
+        max-width: none;
+    }
+
+    #sidebar.open {
+
+        display: block;
+    }
+}

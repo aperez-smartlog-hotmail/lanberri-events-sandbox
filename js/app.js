@@ -82,6 +82,13 @@
             renderItem(item);
 
             updateUrl(item);
+
+            if (window.innerWidth <= 768) {
+
+                sidebar.classList.remove("open");
+
+                menuToggle.textContent = "☰ Menú";
+            }
         });
 
         menuContainer.appendChild(link);
@@ -118,6 +125,19 @@
     window.addEventListener("popstate", () => {
 
         loadCurrentItem();
+    });
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const sidebar = document.getElementById("sidebar");
+
+    menuToggle.addEventListener("click", () => {
+
+        sidebar.classList.toggle("open");
+
+        menuToggle.textContent =
+            sidebar.classList.contains("open")
+                ? "✕ Cerrar"
+                : "☰ Menú";
     });
 
 })();
