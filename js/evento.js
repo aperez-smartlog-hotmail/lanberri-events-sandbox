@@ -64,20 +64,22 @@
         gallery.appendChild(img);
     }
 
-    if (event.inscripcion) {
+    if (event.enlaces?.length) {
 
-        const registration = document.getElementById("registration");
+    const links = document.getElementById("links");
+
+    for (const enlace of event.enlaces) {
 
         const button = document.createElement("a");
 
-        button.href = event.inscripcion;
+        button.href = enlace.url;
         button.target = "_blank";
         button.rel = "noopener noreferrer";
-        button.className = "registration-button";
-        //button.textContent = "📝 Inscribirse";
-        button.textContent = site.textos.inscribirse;
+        button.className = "link-button";
+        button.textContent = enlace.texto;
 
-        registration.appendChild(button);
+        links.appendChild(button);
     }
+}
 
 })();
