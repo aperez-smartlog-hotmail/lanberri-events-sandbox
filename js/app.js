@@ -3,14 +3,23 @@
     const response = await fetch("txomin.json");
     const site = await response.json();
 
-    document.getElementById("site-title").textContent =
-        site.menuHeader;
+    if (site.menuTitulo?.trim()) {
+
+        document.getElementById("site-title").textContent =
+            site.menuTitulo;
+    }
+    else {
+
+        document
+            .getElementById("sidebar-header")
+            ?.remove();
+    }
 
     const menuToggle = document.getElementById("menu-toggle");
     const sidebar = document.getElementById("sidebar");
 
     menuToggle.textContent =
-        site.menuResponsiveOpen;
+        site.menuAbrir;
 
     const menuContainer = document.getElementById("menu");
 
@@ -110,7 +119,7 @@
                 sidebar.classList.remove("open");
 
                 menuToggle.textContent =
-                    site.menuResponsiveOpen;
+                    site.menuAbrir;
             }
         });
 
@@ -159,8 +168,8 @@
 
         menuToggle.textContent =
             sidebar.classList.contains("open")
-                ? site.menuResponsiveClose
-                : site.menuResponsiveOpen;
+                ? site.menuCerrar
+                : site.menuAbrir;
     });
 
 })();

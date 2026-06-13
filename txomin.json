@@ -1,8 +1,7 @@
 {
-  "titulo": "Programa de fiestas",
-  "menuHeader": "JAIAK 2026",
-  "menuResponsiveOpen": "☰ Menú",
-  "menuResponsiveClose": "✕ Cerrar",
+  "menuTitulo": "JAIAK 2026",
+  "menuAbrir": "☰ Menú",
+  "menuCerrar": "✕ Cerrar",
   "menus": [
     {
       "id": "programa",
