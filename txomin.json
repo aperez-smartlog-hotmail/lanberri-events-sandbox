@@ -1,17 +1,14 @@
 {
   "titulo": "Programa de fiestas",
   "menuHeader": "JAIAK 2026",
-  "menuPrincipal": {
-    "texto": "📅 Programa",
-    "url": "index.html"
-  },
-  "portada": [
-    "portada1.jpg"
-  ],
-  "textos": {
-    "inscribirse": "📝 Inscribirse"
-  },
-  "eventos": [
+  "menus": [
+    {
+      "id": "programa",
+      "titulo": "📅 Programa",
+      "imagenes": [
+        "portada1.jpg"
+      ]
+    },
     {
       "id": "fiesta-ibicenca",
       "titulo": "🎉Fiesta Ibicenca 26/08",
