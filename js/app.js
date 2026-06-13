@@ -6,8 +6,11 @@
     document.getElementById("site-title").textContent =
         site.menuHeader;
 
-    document.getElementById("menu-toggle").textContent =
-            site.menuResponsiveOpen;
+    const menuToggle = document.getElementById("menu-toggle");
+    const sidebar = document.getElementById("sidebar");
+
+    menuToggle.textContent =
+        site.menuResponsiveOpen;
 
     const menuContainer = document.getElementById("menu");
 
@@ -20,6 +23,20 @@
 
         document.getElementById("item-description").innerHTML =
             item.descripcion ?? "";
+
+        document
+            .querySelectorAll("#menu a")
+            .forEach(x => x.classList.remove("active"));
+
+        const activeLink =
+            document.querySelector(
+                `#menu a[data-menu-id="${item.id}"]`
+            );
+
+        if (activeLink) {
+
+            activeLink.classList.add("active");
+        }
 
         const gallery = document.getElementById("gallery");
 
@@ -78,6 +95,8 @@
 
         link.textContent = item.titulo;
 
+        link.dataset.menuId = item.id;
+
         link.addEventListener("click", e => {
 
             e.preventDefault();
@@ -90,7 +109,8 @@
 
                 sidebar.classList.remove("open");
 
-                menuToggle.textContent = site.menuResponsiveOpen;
+                menuToggle.textContent =
+                    site.menuResponsiveOpen;
             }
         });
 
@@ -99,7 +119,8 @@
 
     function loadCurrentItem() {
 
-        const params = new URLSearchParams(window.location.search);
+        const params =
+            new URLSearchParams(window.location.search);
 
         const id = params.get("id");
 
@@ -107,11 +128,13 @@
 
         if (id) {
 
-            item = site.menus.find(x => x.id === id);
+            item =
+                site.menus.find(x => x.id === id);
         }
         else {
 
-            item = site.menus.find(x => x.id === "programa")
+            item =
+                site.menus.find(x => x.id === "programa")
                 ?? site.menus[0];
         }
 
@@ -129,9 +152,6 @@
 
         loadCurrentItem();
     });
-
-    const menuToggle = document.getElementById("menu-toggle");
-    const sidebar = document.getElementById("sidebar");
 
     menuToggle.addEventListener("click", () => {
 
