@@ -77,6 +77,9 @@
 
             links.appendChild(button);
         }
+
+        //animateContent();
+        animateElements();  
     }
 
     function updateUrl(item) {
@@ -172,4 +175,67 @@
                 : site.menuAbrir;
     });
 
+    // function animateContent() {
+
+    //     const content =
+    //         document.getElementById("content");
+
+    //     content.classList.remove(
+    //         "content-enter",
+    //         "content-enter-active"
+    //     );
+
+    //     void content.offsetWidth;
+
+    //     content.classList.add("content-enter");
+
+    //     requestAnimationFrame(() => {
+
+    //         content.classList.add(
+    //             "content-enter-active"
+    //         );
+    //     });
+    // }
+
+//     function animateContent() {
+
+//     const content =
+//         document.getElementById("content");
+
+//     content.classList.remove(
+//         "content-slide-in",
+//         "content-slide-in-active"
+//     );
+
+//     void content.offsetWidth;
+
+//     content.classList.add("content-slide-in");
+
+//     requestAnimationFrame(() => {
+
+//         content.classList.add(
+//             "content-slide-in-active"
+//         );
+//     });
+// }
+
+function animateElements() {
+
+    const elements =
+        document.querySelectorAll(
+            "#item-title, #item-description, #links, #gallery"
+        );
+
+    elements.forEach((e, index) => {
+
+        e.classList.remove("show");
+        e.classList.add("animate-item");
+
+        setTimeout(() => {
+
+            e.classList.add("show");
+
+        }, index * 120);
+    });
+}
 })();
